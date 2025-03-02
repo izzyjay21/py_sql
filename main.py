@@ -32,3 +32,16 @@ country_id = pd.read_sql("""
 
 print(country_id)
 
+min_max = pd.read_sql("""
+              SELECT MIN(Country_id), MAX(Country_id) FROM Country;
+""",conn)
+
+print(min_max)
+
+
+like = pd.read_sql("""
+ SELECT * FROM Country WHERE Country_Name LIKE "india";
+
+""",conn)
+
+print(like)
